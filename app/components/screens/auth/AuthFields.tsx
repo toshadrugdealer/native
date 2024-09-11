@@ -20,7 +20,10 @@ export const AuthFields: FC<{ control: Control<IAuthFormData> }> = ({
 						message: 'Invalid email'
 					}
 				}}
-				render={({ field: { value, onChange, onBlur }, fieldState: { error } }) => (
+				render={({
+					field: { value, onChange, onBlur },
+					fieldState: { error }
+				}) => (
 					<>
 						<View
 							className={cn(
@@ -51,7 +54,10 @@ export const AuthFields: FC<{ control: Control<IAuthFormData> }> = ({
 						message: 'Password must be at least 10 characters'
 					}
 				}}
-				render={({ field: { value, onChange, onBlur }, fieldState: { error } }) => (
+				render={({
+					field: { value, onChange, onBlur },
+					fieldState: { error }
+				}) => (
 					<>
 						<View
 							className={cn(
