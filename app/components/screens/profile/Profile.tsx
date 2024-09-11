@@ -1,10 +1,13 @@
+import { Button } from '@/components/ui/Button'
 import { Layout } from '@/components/ui/layout/Layout'
+import { useAuth } from '@/hooks/useAuth'
 import { Text, View } from 'react-native'
 
 export const Profile = () => {
+	const { setUser } = useAuth()
 	return (
 		<Layout title='Profile'>
-			<Text className='text-2xl text-white'>GG Profile</Text>
+			<Button onPress={() => setUser(null)}>Logout</Button>
 		</Layout>
 	)
 }
