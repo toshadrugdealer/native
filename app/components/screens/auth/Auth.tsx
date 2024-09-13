@@ -44,10 +44,7 @@ export const Auth: FC = () => {
 								<AuthFields control={control} />
 								<Button onPress={handleSubmit(onSubmit)}>Go</Button>
 
-								<Pressable
-									onPress={() => setIsReg(!isReg)}
-									className='w-16 self-end'
-								>
+								<Pressable onPress={() => setIsReg(!isReg)} className='w-16 self-end'>
 									<Text className=' text-white/60  text-base mt-3 text-right'>
 										{isReg ? 'Login' : 'Register'}
 									</Text>

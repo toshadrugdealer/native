@@ -1,9 +1,11 @@
+import { Layout } from '@/components/ui/layout/Layout'
 import { Text, View } from 'react-native'
+import { Timer } from './timer/Timer'
 
 export const Home = () => {
 	return (
-		<View className='flex-1 justify-center items-center'>
-			<Text className='text-3xl color-white'>GG Home</Text>
-		</View>
+		<Layout title='Timer'>
+			<Timer />
+		</Layout>
 	)
 }
