@@ -17,13 +17,15 @@ export const MenuItem: FC<IMenuItemProps> = ({ currentRoute, nav, item }) => {
 				className='w-[24%] items-center'
 				onPress={() => nav(item.path)}
 				style={
-					isActive && {
-						shadowColor: AppConstants.primary,
-						shadowOffset: { width: 0, height: 3 },
-						shadowOpacity: 0.8,
-						shadowRadius: 10,
-						elevation: 20
-					}
+					isActive
+						? {
+								shadowColor: AppConstants.primary,
+								shadowOffset: { width: 0, height: 3 },
+								shadowOpacity: 0.8,
+								shadowRadius: 10,
+								elevation: 20
+							}
+						: {}
 				}
 			>
 				<Feather
